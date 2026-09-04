@@ -37,8 +37,8 @@ SELECT id, ad, soyad, email, sehir, qeydiyyat_tarixi FROM magaza.musteriler;
 -- Tapşırıq 5
 CREATE TABLE magaza.sifarisler (
     id SERIAL PRIMARY KEY,
-    musteri_id INT REFERENCES magaza.musteriler(id),
-    mehsul_id INT REFERENCES magaza.mehsullar(id),
+    musteri_id INT NOT NULL REFERENCES magaza.musteriler(id),
+    mehsul_id INT NOT NULL REFERENCES magaza.mehsullar(id),
     say INTEGER NOT NULL CHECK (say >= 1),
     tarix DATE,
     status VARCHAR(20)
@@ -167,7 +167,7 @@ SELECT id, ad, qiymet FROM magaza.mehsullar WHERE qiymet BETWEEN 50 AND 200;
 SELECT id, musteri_id, mehsul_id, status FROM magaza.sifarisler WHERE status in ('gozleyir', 'gonderildi');
 
 -- Tapşırıq 21
-SELECT id, ad, qiymet FROM magaza.mehsullar WHERE ad LIKE 'A%';
+SELECT id, ad, soyad FROM magaza.musteriler WHERE ad LIKE 'A%';
 
 -- Tapşırıq 22
 SELECT id, ad, soyad, email FROM magaza.musteriler WHERE email LIKE '%gmail%';

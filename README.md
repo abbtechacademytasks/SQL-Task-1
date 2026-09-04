@@ -32,7 +32,7 @@ Bu layihədə PostgreSQL üzərində `magaza` sxemi yaradılır və kateqoriyala
 18. Şəhəri Bakı olmayan müştəriləri tapmaq.
 19. Qiyməti 50-200 aralığında olan məhsulları tapmaq.
 20. Statusu `gozleyir` və ya `gonderildi` olan sifarişləri tapmaq.
-21. Adı `A` hərfi ilə başlayan məhsulları tapmaq.
+21. Adı `A` hərfi ilə başlayan müştəriləri tapmaq.
 22. Email ünvanında `gmail` olan müştəriləri tapmaq.
 23. Telefonu `NULL` olan müştəriləri tapmaq.
 24. Qiyməti 100-dən və stok sayı 5-dən böyük məhsulları tapmaq.
